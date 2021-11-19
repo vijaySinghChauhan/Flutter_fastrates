@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_razorpay/Pojo/registerModel.dart';
 import 'package:flutter_razorpay/repo/repoRegister.dart';
@@ -11,31 +13,12 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
 
-  Razorpay razorpay;
+  late Razorpay razorpay;
   TextEditingController textEditingController = new TextEditingController();
 
   @override
   void initState() {
     super.initState();
-
-    registerRepository repo= new registerRepository();
-
-    registerModel reg = new registerModel();
-    reg.firstName = "vj";
-    reg.lastName = "vj";
-    reg.address = "vj";
-    reg.city = "vj";
-    reg.email = "vj";
-    reg.whatsapp = "vj";
-    reg.telegram = "vj";
-    reg.dOJ = "vj";
-    reg.eOJ = "vj";
-    reg.loginId = "vj";
-    reg.password = "vj";
-    reg.dT = "vj";
-
-
-    repo.postRegister(reg);
 
     razorpay = new Razorpay();
 
@@ -52,6 +35,8 @@ class _HomeState extends State<Home> {
   }
 
   void openCheckout(){
+
+
     var options = {
       "key" : "rzp_test_izCuCNkNGnFzY6",
       "amount" : num.parse(textEditingController.text)*100,
@@ -65,19 +50,6 @@ class _HomeState extends State<Home> {
         "wallets" : ["paytm","phonepe","amazonpay","freecharge","payzapp","airtelmoney","mobikwik","jiomoney","phonepeswitch","paypal","olamoney"],
 
       },
-      // "options": {
-      //   "checkout": {
-      //     "method": {
-      //       "netbanking": "1",
-      //       "card": "1",
-      //       "upi": "1",
-      //       "wallet": ["paytm","phonepe","amazonpay","freecharge","payzapp","airtelmoney","mobikwik","jiomoney","phonepeswitch","paypal","olamoney"]
-      //     }
-      //   }
-      // }
-
-
-
     };
 
     try{

@@ -18,7 +18,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -27,33 +27,40 @@ dependencies:
   razorpay_flutter: ^1.2.7
 
   cupertino_icons: ^1.0.0
-  rxdart: ^0.26.0
-  fluttertoast: ^7.1.6
+  rxdart: ^0.27.2
+  fluttertoast: ^8.0.8
   spinner: ^1.0.1
   shared_preferences: ^2.0.6
-  date_format: ^1.0.9
-  json_annotation: ^3.1.1
-  flutter_countdown_timer: ^3.0.1
-  bloc_provider: ^0.7.0+3
+  date_format: ^2.0.4
+  json_annotation: ^4.3.0
+  flutter_countdown_timer: ^4.1.0
+  bloc_provider: ^0.8.0
   intl: ^0.17.0
   permission_handler: ^8.1.1
   flutter_image_compress: ^1.0.0
-  camera: 0.8.1+5
+  camera: ^0.9.4+4
   record: ^3.0.0
-  dio: ^3.0.8
+ # http: ^0.13.4
+  dio: ^4.0.3
+
 
 dependency_overrides:
   flutter_colorpicker: ^1.0.1
 
 dev_dependencies:
-  build_runner: ^1.11.1
-  json_serializable: ^3.5.1
+  build_runner: ^2.1.5
+  json_serializable: ^6.0.1
+  flutter_launcher_icons: ^0.9.2
+
   flutter_test:
     sdk: flutter
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
-
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/icon.png"
 # The following section is specific to Flutter.
 flutter:
 

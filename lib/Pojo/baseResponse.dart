@@ -1,7 +1,7 @@
 class baseResponse {
   String msg;
 
-  baseResponse({this.msg});
+  baseResponse({required this.msg});
 
   fromJson(Map<String, dynamic> json) {
     msg = json['msg'];

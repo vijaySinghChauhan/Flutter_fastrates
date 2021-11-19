@@ -1,6 +1,5 @@
 import 'dart:html';
 
-import 'package:dio/dio.dart';
 
 
 // Future post(String path, Map<String, dynamic> data) async {

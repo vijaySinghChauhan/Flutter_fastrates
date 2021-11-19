@@ -1,30 +1,32 @@
+
 class registerModel {
-  String lastName;
-  String firstName;
-  String address;
-  String city;
-  String email;
-  String whatsapp;
-  String telegram;
-  String dOJ;
-  String eOJ;
-  String dT;
-  String loginId;
-  String password;
+ late String lastName="";
+ late String firstName="";
+ late String address="";
+ late  String city="";
+ late String email="";
+ late  String whatsapp="";
+ late String telegram="";
+ late String dOJ="";
+ late String eOJ="";
+ late String dT="";
+ late String loginId="";
+ late String password="";
+
 
   registerModel(
-      {this.lastName,
-        this.firstName,
-        this.address,
-        this.city,
-        this.email,
-        this.whatsapp,
-        this.telegram,
-        this.dOJ,
-        this.eOJ,
-        this.dT,
-        this.loginId,
-        this.password});
+      {required this.lastName,
+        required this.firstName,
+        required this.address,
+        required this.city,
+        required this.email,
+        required this.whatsapp,
+        required this.telegram,
+        required this.dOJ,
+        required this.eOJ,
+        required this.dT,
+        required this.loginId,
+        required this.password});
 
   registerModel.fromJson(Map<String, dynamic> json) {
     lastName = json['LastName'];
